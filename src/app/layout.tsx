@@ -24,7 +24,11 @@ export default function RootLayout({
           charSet="UTF-8"
         />
       </Head>
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${inter.className} min-w-screen mt-0 flex justify-center md:mt-[123px]`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
