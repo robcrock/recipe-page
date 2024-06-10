@@ -25,7 +25,7 @@ export default function RootLayout({
         />
       </Head>
       <body
-        className={`${inter.className} min-w-screen mt-0 flex justify-center md:mt-[123px]`}
+        className={`${inter.className} min-w-screen mt-0 flex justify-center md:mt-[107px]`}
       >
         {children}
       </body>
