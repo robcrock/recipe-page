@@ -1,9 +1,17 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
+import localFont from "@next/font/local";
 
-const inter = Inter({ subsets: ["latin"] });
+const youngSerif = localFont({
+  src: "../../public/assets/fonts/young-serif/youngserif-regular.ttf",
+  variable: "--font-ys",
+});
+
+const outfit = localFont({
+  src: "../../public/assets/fonts/outfit/outfit-variable.ttf",
+  variable: "--font-outfit",
+});
 
 export const metadata: Metadata = {
   title: "Frontend Mentor | Recipe Page",
@@ -25,7 +33,7 @@ export default function RootLayout({
         />
       </Head>
       <body
-        className={`${inter.className} min-w-screen mt-0 flex justify-center md:mt-[107px]`}
+        className={`${youngSerif.variable} ${outfit.variable} min-w-screen mt-0 flex justify-center md:mt-[107px]`}
       >
         {children}
       </body>
