@@ -33,7 +33,7 @@ export default function RootLayout({
         />
       </Head>
       <body
-        className={`${youngSerif.variable} ${outfit.variable} min-w-screen mt-0 flex justify-center md:mt-[107px]`}
+        className={`${youngSerif.variable} ${outfit.variable} min-w-screen bg-eggshell mt-0 flex justify-center md:mt-[107px]`}
       >
         {children}
       </body>

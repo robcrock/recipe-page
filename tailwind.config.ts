@@ -19,6 +19,13 @@ const config = {
     },
     extend: {
       colors: {
+        "dark-charcoal": "#312e2c",
+        "dark-raspberry": "#7a284e",
+        "brandy-red": "#854632",
+        "wenge-brown": "#5f564d",
+        eggshell: "#f3e5d7",
+        "white-coffee": "#e3ddd7",
+        snow: "#fff7fb",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

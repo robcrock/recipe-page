@@ -11,12 +11,16 @@ import {
 
 export default function Home() {
   return (
-    <main className="flex flex-col justify-between gap-8 p-0 md:p-4">
-      <Card className="flex w-full flex-col items-center justify-between gap-6 rounded-none md:w-[736px] md:rounded-3xl">
+    <main className="flex flex-col p-0 md:p-4">
+      <Card className="text-dark-charcoal flex w-full flex-col items-center justify-between gap-6 rounded-none border-none md:w-[736px] md:rounded-3xl">
         {/* card */}
         <CardHeader className="p-0 md:p-4">
           {/* hero image */}
-          <Image className="rounded-xl" src={omelette} alt={"Omelette"} />
+          <Image
+            className="rounded-none md:rounded-xl"
+            src={omelette}
+            alt={"Omelette"}
+          />
         </CardHeader>
         <CardContent className="flex flex-col gap-8">
           {/* title */}
@@ -32,31 +36,33 @@ export default function Home() {
             </CardDescription>
           </section>
           {/* cook time */}
-          <Card className="flex flex-col gap-4">
+          <Card className="bg-snow flex flex-col gap-4 border-none">
             <CardHeader className="px-7 pb-0">
-              <CardTitle className="font-base text-bReg text-xl font-semibold">
+              <CardTitle className="font-base text-bReg text-dark-raspberry text-xl font-semibold">
                 Preparation time
               </CardTitle>
             </CardHeader>
             <CardContent className="px-7 pb-7 pt-0">
-              <ul className="font-base text-bReg list-outside list-disc pl-4 font-light">
+              <ul className="font-base text-bReg marker:text-dark-raspberry list-outside list-disc pl-4 font-light marker:text-xs">
                 <li className="pl-3">
-                  <span className="font-semibold">Total:</span> Approximately 10
+                  <span className="font-medium">Total:</span> Approximately 10
                   minutes
                 </li>
                 <li className="pl-3">
-                  <span className="font-semibold">Preparation:</span> 5 minutes
+                  <span className="font-medium">Preparation:</span> 5 minutes
                 </li>
                 <li className="pl-3">
-                  <span className="font-semibold">Cooking:</span> 5 minutes
+                  <span className="font-medium">Cooking:</span> 5 minutes
                 </li>
               </ul>
             </CardContent>
           </Card>
           {/* ingrdients */}
           <section className="text-m flex flex-col gap-6">
-            <h3 className="font-header text-m">Ingredients</h3>
-            <ul className="font-base text-bReg flex list-outside list-disc flex-col gap-2 pl-4 font-light">
+            <h3 className="font-header text-m text-dark-raspberry">
+              Ingredients
+            </h3>
+            <ul className="font-base text-bReg marker:text-dark-raspberry flex list-outside list-disc flex-col gap-2 pl-4 font-light marker:text-xs">
               <li className="pl-3">2-3 large eggs</li>
               <li className="pl-3">Salt, to taste</li>
               <li className="pl-3">Pepper, to taste</li>
@@ -70,8 +76,10 @@ export default function Home() {
           <hr />
           {/* instructions */}
           <section className="flex flex-col gap-6">
-            <h3 className="font-header text-m">Instructions </h3>
-            <ol className="flex list-outside list-decimal flex-col gap-2 pl-4 text-left font-light">
+            <h3 className="font-header text-m text-dark-raspberry">
+              Instructions{" "}
+            </h3>
+            <ol className="marker:text-dark-raspberry flex list-outside list-decimal flex-col gap-2 pl-4 text-left font-light marker:font-semibold">
               <li className="pl-3">
                 <span className="font-semibold">Beat the eggs:</span> In a bowl,
                 beat the eggs with a pinch of salt and pepper until they are
@@ -109,7 +117,9 @@ export default function Home() {
           <hr />
           {/* nutrition */}
           <section className="flex flex-col gap-6">
-            <h3 className="font-header text-m">Nutrition</h3>
+            <h3 className="font-header text-m text-dark-raspberry">
+              Nutrition
+            </h3>
             <p className="font-base text-bReg">
               Nutrition The table below shows nutritional values per serving
               without the additional fillings.
@@ -117,28 +127,44 @@ export default function Home() {
             <ul className="font-base text-bReg divide-y divide-gray-300">
               <li className="flex h-12 items-center px-2 md:px-8">
                 <span className="w-full">Calories</span>
-                <span className="w-full font-semibold">277kcal</span>
+                <span className="text-dark-raspberry w-full font-semibold">
+                  277kcal
+                </span>
               </li>
               <li className="flex h-12 items-center border-b border-slate-300 px-2 md:px-8">
                 <span className="w-full">Carbs</span>
-                <span className="w-full font-semibold">0g</span>
+                <span className="text-dark-raspberry w-full font-semibold">
+                  0g
+                </span>
               </li>
               <li className="flex h-12 items-center border-b border-slate-300 px-2 md:px-8">
                 <span className="w-full">Protein</span>
-                <span className="w-full font-semibold">20g</span>
+                <span className="text-dark-raspberry w-full font-semibold">
+                  20g
+                </span>
               </li>
               <li className="flex h-12 items-center border-b border-slate-300 px-2 md:px-8">
                 <span className="w-full">Fat</span>
-                <span className="w-full font-semibold">22g</span>
+                <span className="text-dark-raspberry w-full font-semibold">
+                  22g
+                </span>
               </li>
             </ul>
           </section>
-        </CardContent>
+        </CardContent>{" "}
+        <section className="block pb-4 md:hidden">
+          <Attribution
+            name={"Robert Crocker"}
+            link={"https://www.frontendmentor.io/profile/robcrock"}
+          />
+        </section>
       </Card>
-      <Attribution
-        name={"Robert Crocker"}
-        link={"https://www.frontendmentor.io/profile/robcrock"}
-      />
+      <section className="my-4 hidden md:block">
+        <Attribution
+          name={"Robert Crocker"}
+          link={"https://www.frontendmentor.io/profile/robcrock"}
+        />
+      </section>
     </main>
   );
 }
