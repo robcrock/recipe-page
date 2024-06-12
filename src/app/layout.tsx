@@ -4,12 +4,12 @@ import Head from "next/head";
 import localFont from "@next/font/local";
 
 const youngSerif = localFont({
-  src: "../../public/assets/fonts/young-serif/youngserif-regular.ttf",
+  src: "../../public/fonts/youngserif.ttf",
   variable: "--font-ys",
 });
 
 const outfit = localFont({
-  src: "../../public/assets/fonts/outfit/outfit-variable.ttf",
+  src: "../../public/fonts/outfit.ttf",
   variable: "--font-outfit",
 });
 
