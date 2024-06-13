@@ -7,6 +7,9 @@ import { Preparation } from "./components/preparation";
 import { Ingredients } from "./components/ingredients";
 import { Instructions } from "./components/instructions";
 import { Nutrition } from "./components/nutrition";
+import { recipe } from "../config";
+
+const { title, preparation, ingredients, instructions, nutrition } = recipe;
 
 export default function Home() {
   return (
@@ -15,11 +18,19 @@ export default function Home() {
         heroImage={<HeroImage />}
         cardContent={
           <Content
-            title={<Title />}
-            preparation={<Preparation />}
-            ingredients={<Ingredients />}
-            instructions={<Instructions />}
-            nutrition={<Nutrition />}
+            title={
+              <Title title={title.title} description={title.description} />
+            }
+            preparation={
+              <Preparation
+                total={preparation.total}
+                preparation={preparation.preparation}
+                cooking={preparation.cooking}
+              />
+            }
+            ingredients={<Ingredients ingredients={ingredients} />}
+            instructions={<Instructions instructions={instructions} />}
+            nutrition={<Nutrition nutrition={nutrition} />}
           />
         }
       />
